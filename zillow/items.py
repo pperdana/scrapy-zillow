@@ -13,8 +13,6 @@ def url_abs(relative_url):
     return abs_url
 
 class ZillowItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
     id = scrapy.Field(
         output_processor=TakeFirst()
     )
@@ -44,12 +42,6 @@ class ZillowItem(scrapy.Item):
         output_processor=TakeFirst()
     )
     area_sqft = scrapy.Field(
-        output_processor=TakeFirst()
-    )
-    latitude = scrapy.Field(
-        output_processor=TakeFirst()
-    )
-    longtitude = scrapy.Field(
         output_processor=TakeFirst()
     )
     broker_name = scrapy.Field(

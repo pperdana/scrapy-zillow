@@ -31,8 +31,6 @@ class ZillowHouseSpider(scrapy.Spider):
             loader.add_value('beds', house.get('beds'))
             loader.add_value('baths', house.get('baths'))
             loader.add_value('area_sqft', house.get('area'))
-            loader.add_value('latitude', house.get('latitude'))
-            loader.add_value('longtitude', house.get('longitude'))
 
             yield loader.load_item()
             # print(house)
